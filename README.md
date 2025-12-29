@@ -65,9 +65,46 @@ The public leaderboard uses only 50% of the test set, so care was taken to avoid
 
 The model is evaluated using the **F1-score**:
 
+Id,target_feature
+0,0
+1,1
+2,1
+…
+
+Where:
+- `Id` — index of the image in the test dataset  
+- `target_feature` — predicted class ID  
+
+## Results
+
+The trained model achieves a competitive F1-score on the validation split and demonstrates stable generalization without reliance on external data.
+
+## How to Run
+
+1. Install dependencies:
+```bash
+pip install -r requirements.txt
+
 \[
 F1 = \frac{2 \cdot precision \cdot recall}{precision + recall}
 \]
+```
+
+2.	Train the model:
+```bash
+python src/train.py
+```
+
+3.	Generate predictions:
+```bash
+python src/inference.py
+```
+
+Motivation
+
+This project was created as part of my preparation in machine learning and computer vision. I focused on understanding the full training pipeline.
+
+
 
 ## Submission Format
 
