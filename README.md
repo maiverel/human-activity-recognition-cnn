@@ -85,9 +85,7 @@ The trained model achieves a competitive F1-score on the validation split and de
 ```bash
 pip install -r requirements.txt
 
-\[
-F1 = \frac{2 \cdot precision \cdot recall}{precision + recall}
-\]
+F1-score = 2 * (precision * recall) / (precision + recall)
 ```
 
 2.	Train the model:
