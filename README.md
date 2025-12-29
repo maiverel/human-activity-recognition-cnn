@@ -64,12 +64,21 @@ The public leaderboard uses only 50% of the test set, so care was taken to avoid
 ## Evaluation Metric
 
 The model is evaluated using the **F1-score**:
+```bash
+F1-score = 2 * (precision * recall) / (precision + recall)
+```
 
+## Submission Format
+
+Predictions are saved in CSV format:
+
+```bash
 Id,target_feature
 0,0
 1,1
 2,1
 …
+```
 
 Where:
 - `Id` — index of the image in the test dataset  
@@ -102,8 +111,3 @@ Motivation
 
 This project was created as part of my preparation in machine learning and computer vision. I focused on understanding the full training pipeline.
 
-
-
-## Submission Format
-
-Predictions are saved in CSV format:
