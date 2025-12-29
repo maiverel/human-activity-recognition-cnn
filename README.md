@@ -1,4 +1,4 @@
-# human-activity-recognition-cnn
+# Human Activity Recognition using CNNs
 
 This project implements a convolutional neural network (CNN) for image classification as part of the **Yandex Academy ML Intensive (Spring 2025)**.
 
@@ -64,9 +64,9 @@ The public leaderboard uses only 50% of the test set, so care was taken to avoid
 ## Evaluation Metric
 
 The model is evaluated using the **F1-score**:
-```bash
+
 F1-score = 2 * (precision * recall) / (precision + recall)
-```
+
 
 ## Submission Format
 
@@ -93,8 +93,6 @@ The trained model achieves a competitive F1-score on the validation split and de
 1. Install dependencies:
 ```bash
 pip install -r requirements.txt
-
-F1-score = 2 * (precision * recall) / (precision + recall)
 ```
 
 2.	Train the model:
@@ -107,7 +105,7 @@ python src/train.py
 python src/inference.py
 ```
 
-Motivation
+## Motivation
 
-This project was created as part of my preparation in machine learning and computer vision. I focused on understanding the full training pipeline.
+This project was created as part of my preparation in machine learning and computer vision. I focused on building models from scratch and understanding the full training pipeline.
 
