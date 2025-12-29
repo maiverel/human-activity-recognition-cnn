@@ -205,3 +205,15 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+# ML
+# Dataset
+data/img_train/
+data/img_test/
+
+# Model weights
+*.pt
+*.pth
+
+# OS files
+.DS_Store
