@@ -1,2 +1,74 @@
 # human-activity-recognition-cnn
-Convolutional Neural Network for Human Activity Recognition (Yandex Academy ML Intensive, Spring 2025)
+
+This project implements a convolutional neural network (CNN) for image classification as part of the **Yandex Academy ML Intensive (Spring 2025)**.
+
+The goal is to classify images of people performing different activities using only the provided dataset, without external data or pretrained models.
+
+## Problem Description
+
+Given an image of a person, the model predicts one of **15 activity classes**, including:
+
+- sports
+- occupation
+- conditioning exercise
+- home activities
+- lawn and garden
+- home repair
+- water activities
+- winter activities
+- fishing and hunting
+- dancing
+- walking
+- music playing
+- bicycling
+- running
+- inactivity (quiet/light)
+
+## Dataset
+
+- **Train set:** 12,000 images  
+- **Test set:** 5,000 images  
+
+Files provided:
+- `img_train/` — training images  
+- `img_test/` — test images  
+- `train_answers.csv` — ground truth labels for training images  
+- `activity_categories.csv` — mapping from class IDs to human-readable labels  
+
+> The dataset is not included in this repository due to size and licensing constraints.
+
+## Model Architecture
+
+The model is a custom **convolutional neural network implemented in PyTorch**.
+
+Key components:
+- Stacked convolutional blocks (Conv2D → BatchNorm → ReLU → MaxPooling)
+- Dropout regularization to prevent overfitting
+- Fully connected classifier head
+- Softmax output over 15 classes
+
+No pretrained weights or external datasets were used.
+
+---
+
+## Training Details
+
+- **Loss function:** Cross-Entropy Loss  
+- **Optimizer:** Adam  
+- **Evaluation metric:** F1-score (macro)  
+
+The F1-score was chosen to balance precision and recall across classes, especially given potential class imbalance.
+
+The public leaderboard uses only 50% of the test set, so care was taken to avoid overfitting.
+
+## Evaluation Metric
+
+The model is evaluated using the **F1-score**:
+
+\[
+F1 = \frac{2 \cdot precision \cdot recall}{precision + recall}
+\]
+
+## Submission Format
+
+Predictions are saved in CSV format:
